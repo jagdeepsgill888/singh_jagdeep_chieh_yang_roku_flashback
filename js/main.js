@@ -1,3 +1,8 @@
+import { fetchData } from "./components/TheDataMovie.js";
+import Movie from "./components/TheDataMovie.js";
+import TypeMovie from "./components/TheMovie.js";
+import Playlist from "./components/ThePlaylist.js";
+
 (()=> {
 	// stub - your code goes here 
 		let vue_vm = new Vue({
@@ -60,6 +65,18 @@
 					document.querySelectorAll('.movie-box>ul>li')[index].classList.toggle('show-lightbox');
 				},
 			},
-		}).$mount("#app"); // also connects Vue to your wrapper in HTML
+			}).$mount("#app"); // also connects Vue to your wrapper in HTML
+		
+			let menuToggle = document.querySelector("#menuToggle"),
+    			burgerCon = document.querySelector("#mainNav");
+
+    		function hamburgerMenu() {
+        		burgerCon.classList.toggle("slideToggle");
+        		menuToggle.classList.toggle("expanded");
+    			}
+			function slider()  { //this is for a slider function
+
+    			}
+    			menuToggle.addEventListener("click", hamburgerMenu);
 	})();
 
