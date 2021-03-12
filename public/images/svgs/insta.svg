@@ -1,8 +1,26 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 57.45 57.93">
-  <g id="insta">
-    <path id="Path_8" data-name="Path 8" d="M53.74,29.46A24.36,24.36,0,1,1,29.39,5.1h0A24.36,24.36,0,0,1,53.74,29.46Z" style="fill: #a9742a"/>
-    <g id="Group_5" data-name="Group 5">
-      <path id="Path_9" data-name="Path 9" d="M38.73,14.24H20.05a5.88,5.88,0,0,0-5.88,5.88V38.8a5.88,5.88,0,0,0,5.88,5.88H38.73a5.88,5.88,0,0,0,5.88-5.88V20.12A5.88,5.88,0,0,0,38.73,14.24Zm1.69,3.51h.67v5.16H36l0-5.16ZM25,26.34a5.35,5.35,0,1,1-1,3.12,5.35,5.35,0,0,1,1-3.12ZM41.64,38.8a2.92,2.92,0,0,1-2.92,2.92H20.05a2.92,2.92,0,0,1-2.92-2.92V26.34h4.54a8.33,8.33,0,1,0,15.43,0h4.54Z" style="fill: #fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="41" viewBox="0 0 40 41">
+  <defs>
+    <clipPath id="clip-path">
+      <ellipse id="Ellipse_17" data-name="Ellipse 17" cx="20" cy="20.5" rx="20" ry="20.5" transform="translate(0.328 -0.386)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <path id="Path_3" data-name="Path 3" d="M46.551,27.1A20.411,20.411,0,1,1,26.141,6.687h0A20.462,20.462,0,0,1,46.551,27.1Z" transform="translate(-5.73 -6.687)" fill="#a9742a"/>
+    </clipPath>
+  </defs>
+  <g id="insta" transform="translate(-0.328 0.385)">
+    <g id="insta-2" data-name="insta" clip-path="url(#clip-path)">
+      <g id="fb" transform="translate(0 0)">
+        <g id="insta-3" data-name="insta" transform="translate(0 0)">
+          <g id="Mask_Group_10" data-name="Mask Group 10" clip-path="url(#clip-path-2)">
+            <g id="insta-4" data-name="insta" transform="translate(0 0)">
+              <path id="Path_8" data-name="Path 8" d="M46.8,26.482A20.411,20.411,0,1,1,26.4,6.071h0A20.411,20.411,0,0,1,46.8,26.482Z" transform="translate(-5.976 -6.071)" fill="#6c3c97"/>
+              <g id="Group_5" data-name="Group 5" transform="translate(7.667 7.658)">
+                <path id="Path_9" data-name="Path 9" d="M37.447,16.952H21.8a4.927,4.927,0,0,0-4.927,4.927V37.531A4.927,4.927,0,0,0,21.8,42.457H37.447a4.927,4.927,0,0,0,4.927-4.927V21.879A4.927,4.927,0,0,0,37.447,16.952Zm1.416,2.941h.561v4.323H35.16V19.893Zm-12.92,7.2a4.483,4.483,0,1,1-.838,2.614A4.483,4.483,0,0,1,25.943,27.091Zm13.942,10.44a2.447,2.447,0,0,1-2.447,2.447H21.8a2.447,2.447,0,0,1-2.447-2.447V27.091h3.8a6.98,6.98,0,1,0,12.929,0h3.8Z" transform="translate(-16.869 -16.952)" fill="#fff"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
     </g>
   </g>
 </svg>

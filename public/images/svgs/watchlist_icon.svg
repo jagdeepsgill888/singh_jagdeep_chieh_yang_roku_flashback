@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewBox="0 0 43 43">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_14" data-name="Ellipse 14" cx="21.5" cy="21.5" r="21.5" transform="translate(206 763)" fill="#292a2b" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="watchlist_icon" transform="translate(-206 -763)" clip-path="url(#clip-path)">
+    <g id="playlist_play-24px" transform="translate(206 763)">
+      <path id="Path_15" data-name="Path 15" d="M0,0H43V43H0Z" fill="none"/>
+      <path id="Path_16" data-name="Path 16" d="M7.167,17.917h21.5V21.5H7.167Zm0-7.167h21.5v3.583H7.167Zm0,14.333H21.5v3.583H7.167Zm17.917,0v10.75l8.958-5.375Z" fill="#e2e2e2"/>
+    </g>
+  </g>
+</svg>

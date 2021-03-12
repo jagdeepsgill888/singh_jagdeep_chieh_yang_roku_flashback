@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewBox="0 0 43 43">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_12" data-name="Ellipse 12" cx="21.5" cy="21.5" r="21.5" transform="translate(49 763)" fill="#e2e2e2"/>
+    </clipPath>
+  </defs>
+  <g id="home_icon" transform="translate(-49 -763)" clip-path="url(#clip-path)">
+    <g id="home-24px" transform="translate(49 763)">
+      <path id="Path_11" data-name="Path 11" d="M0,0H43V43H0Z" fill="none"/>
+      <path id="Path_12" data-name="Path 12" d="M17.917,35.833V25.083h7.167v10.75h8.958V21.5h5.375L21.5,5.375,3.583,21.5H8.958V35.833Z" fill="#e2e2e2"/>
+    </g>
+  </g>
+</svg>

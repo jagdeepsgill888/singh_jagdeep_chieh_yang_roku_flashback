@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63" height="63" viewBox="0 0 63 63">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_22" data-name="Ellipse 22" cx="31.5" cy="31.5" r="31.5" transform="translate(67 -622.444)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="slider_left" transform="translate(-67 622.444)" clip-path="url(#clip-path)">
+    <g id="arrow_back_ios-24px" transform="translate(67 -622.444)">
+      <path id="Path_51" data-name="Path 51" d="M0,0H63V63H0Z" fill="none"/>
+      <path id="Path_52" data-name="Path 52" d="M30.634,10.159,25.987,5.512,0,31.5,25.987,57.487l4.646-4.646L9.292,31.5Z" transform="translate(10)" fill="#6c3c97"/>
+    </g>
+  </g>
+</svg>
