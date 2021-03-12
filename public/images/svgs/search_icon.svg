@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewBox="0 0 43 43">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_13" data-name="Ellipse 13" cx="21.5" cy="21.5" r="21.5" transform="translate(128 763)" fill="#292a2b" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="search_icon" transform="translate(-128 -763)" clip-path="url(#clip-path)">
+    <g id="search-24px" transform="translate(128 763)">
+      <path id="Path_13" data-name="Path 13" d="M0,0H43V43H0Z" fill="none"/>
+      <path id="Path_14" data-name="Path 14" d="M27.771,25.083H26.355l-.5-.484A11.663,11.663,0,1,0,24.6,25.854l.484.5v1.415l8.958,8.94,2.67-2.67Zm-10.75,0a8.062,8.062,0,1,1,8.063-8.062A8.052,8.052,0,0,1,17.021,25.083Z" fill="#e2e2e2"/>
+    </g>
+  </g>
+</svg>
