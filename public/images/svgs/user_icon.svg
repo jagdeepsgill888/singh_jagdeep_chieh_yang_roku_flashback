@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43" height="43" viewBox="0 0 43 43">
+  <defs>
+    <clipPath id="clip-path"/>
+  </defs>
+  <g id="user_icon" transform="translate(-286 -763)" clip-path="url(#clip-path)">
+    <g id="person_outline-24px" transform="translate(286 763)">
+      <path id="Path_17" data-name="Path 17" d="M0,0H43V43H0Z" fill="none"/>
+      <path id="Path_18" data-name="Path 18" d="M21.5,10.571a3.762,3.762,0,1,1-3.763,3.762A3.762,3.762,0,0,1,21.5,10.571m0,16.125c5.321,0,10.929,2.616,10.929,3.763v1.971H10.571V30.458c0-1.147,5.608-3.763,10.929-3.763m0-19.529a7.167,7.167,0,1,0,7.167,7.167A7.165,7.165,0,0,0,21.5,7.167Zm0,16.125c-4.784,0-14.333,2.4-14.333,7.167v5.375H35.833V30.458C35.833,25.692,26.284,23.292,21.5,23.292Z" fill="#e2e2e2"/>
+    </g>
+  </g>
+</svg>
