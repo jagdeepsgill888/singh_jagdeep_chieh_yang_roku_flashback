@@ -25,6 +25,12 @@ Please grab it from there and place it in your phpmyadmin.
 A newer verison of the DB will be uploaded once its ready.
 For the time being, the class build's DB is being used.
 
+## Where is the Prototype?
+
+[Mobile Prototype](https://xd.adobe.com/view/c8638030-343e-4548-95d1-b5f55d449e6e-9d30/)
+
+[Desktop Prototype](https://xd.adobe.com/view/791e8a0a-8a15-4f19-8fae-6402d2d3c6d6-2c4d/)
+
 ## Author
 
 Jagdeep Singh, Yang Chieh
