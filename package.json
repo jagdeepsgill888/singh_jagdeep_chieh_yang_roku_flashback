@@ -1,20 +1,17 @@
 {
-  "name": "singh_jagdeep_chieh_yang_roku_flashback",
+  "name": "roku_client_jag_w21",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "roku front end",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app",
+    "start-dev": "nodemon app"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jagdeepsgill888/singh_jagdeep_chieh_yang_roku_flashback.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jagdeepsgill888/singh_jagdeep_chieh_yang_roku_flashback/issues"
-  },
-  "homepage": "https://github.com/jagdeepsgill888/singh_jagdeep_chieh_yang_roku_flashback#readme"
+  "author": "JS",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "http-proxy-middleware": "^1.0.6"
+  }
 }
