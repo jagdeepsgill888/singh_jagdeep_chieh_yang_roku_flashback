@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 13, 2021 at 03:48 AM
+-- Generation Time: Mar 14, 2021 at 04:36 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `a4_w20_roku`
+-- Database: `a4_flasback_roku`
 --
 
 -- --------------------------------------------------------
@@ -661,27 +661,27 @@ CREATE TABLE IF NOT EXISTS `tbl_movies` (
 --
 
 INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_year`, `movies_runtime`, `movies_storyline`, `movies_trailer`, `movies_release`) VALUES
-(1, 'guardians2.jpg', 'Guardians of the Galaxy Vol. 2', '2017', '2h 16m', 'The Guardians must fight to keep their newfound family together as they unravel the mystery of Peter Quill&rsquo;s true parentage.', 'Guardians2.mp4', 'May 5, 2017'),
-(2, 'dunkirk.jpg', 'Dunkirk', '2017', '1h 46m', 'Allied soldiers from Belgium, the British Empire and France are surrounded by the German army and evacuated during a fierce battle in World War II.', 'Dunkirk.mp4', 'July 21, 2017'),
-(3, 'logan.jpg', 'Logan', '2017', '2h 17m', 'In the near future, a weary Logan cares for an ailing Professor X, somewhere on the Mexican border. However, Logan&rsquo;s attempts to hide from the world, and his legacy, are upended when a young mutant arrives, pursued by dark forces.', 'Logan.mp4', 'March 3,2017'),
-(4, 'okja.jpg', 'Okja', '2017', '2h', ' Meet Mija, a young girl who risks everything to prevent a powerful, multi-national company from kidnapping her best friend - a fascinating animal named Okja. ', 'Okja.mp4', 'June 28,2017'),
-(5, 'beauty.jpg', 'Beauty and the Beast', '2017', '2h 9min', 'An adaptation of the fairy tale about a monstrous-looking prince and a young woman who fall in love. ', 'Beauty.mp4', 'March 17, 2017'),
-(6, 'hacksaw.jpg', 'Hacksaw Ridge', '2016', '2h 19m', 'WWII American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people, and becomes the first man in American history to receive the Medal of Honor without firing a shot.', 'Hacksaw.mp4', 'November 4, 2016'),
-(7, 'deadpool.jpg', 'Deadpool', '2016', '1h 48m', 'A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.', 'Deadpool.mp4', 'Febuary 12, 2016'),
-(8, 'arrival.jpg', 'Arrival', '2016', '1h 56m', 'When twelve mysterious spacecraft appear around the world, linguistics professor Louise Banks is tasked with interpreting the language of the apparent alien visitors.', 'Arrival.mp4', 'November 11, 2016'),
-(9, 'eddie.jpg', 'Eddie the Eagle', '2016', '1h 46m', 'The story of Eddie Edwards, the notoriously tenacious British underdog ski jumper who charmed the world at the 1988 Winter Olympics.', 'Eddie.mp4', 'Febuary 26, 2016'),
-(10, 'trolls.jpg', 'Trolls', '2016', '1h 32m', 'After the Bergens invade Troll Village, Poppy, the happiest Troll ever born, and the curmudgeonly Branch set off on a journey to rescue her friends.', 'Trolls.mp4', 'November 4, 2016'),
-(11, 'revenant.jpg', 'The Revenant', '2015', '2h 36m', 'A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.', 'Revenant.mp4', 'January 8, 2015'),
-(12, 'brooklyn.jpg', 'Brooklyn', '2015', '1h 57m', 'An Irish immigrant lands in 1950s Brooklyn, where she quickly falls into a romance with a local. When her past catches up with her, however, she must choose between two countries and the lives that exist within.', 'Brooklyn.mp4', 'November 25, 2015'),
-(13, 'walk.jpg', 'The Walk', '2015', '2h 3m', 'In 1974, high-wire artist Philippe Petit recruits a team of people to help him realize his dream: to walk the immense void between the World Trade Center towers.', 'Walk.mp4', 'October 9, 2015'),
-(14, 'colonia.jpg', 'Colonia', '2015', '1h 46m', 'A young woman&rsquo;s desperate search for her abducted boyfriend that draws her into the infamous Colonia Dignidad, a sect nobody has ever escaped from.', 'Colonia.mp4', 'April 15, 2015'),
-(15, 'force.jpg', 'Star Wars: The Force Awakens', '2015', '2h 16m', 'Three decades after the Empire&rsquo;s defeat, a new threat arises in the militant First Order. Stormtrooper defector Finn and spare parts scavenger Rey are caught up in the Resistance&rsquo;s search for the missing Luke Skywalker.', 'Force.mp4', 'December 18, 2015'),
-(16, 'whiplash.jpg', 'Whiplash', '2014', '1h 47m', 'A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student\'s potential.', 'Whiplash.mp4', 'October 15, 2014'),
-(17, 'guardians.jpg', 'Guardians of the Galaxy', '2014', '2h 1m', 'A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.', 'Guardians.mp4', 'August 1, 2014'),
-(18, 'donjon.jpg', 'Don Jon', '2013', '1h 30m', 'A New Jersey guy dedicated to his family, friends, and church, develops unrealistic expectations from watching porn and works to find happiness and intimacy with his potential true love.', 'donjon.mp4', 'September 27, 2013'),
-(19, 'gravity.jpg', 'Gravity', '2013', '1h 31m', 'Two astronauts work together to survive after an accident which leaves them alone in space.', 'Gravity.mp4', 'October 4, 2013'),
-(20, 'pi.jpg', 'Life of Pi', '2012', '2h 7m', 'A young man who survives a disaster at sea is hurtled into an epic journey of adventure and discovery. While cast away, he forms an unexpected connection with another survivor: a fearsome Bengal tiger.', 'Pi.jpg', 'November 21, 2012'),
-(21, 'silver.jpg', 'Silver Linings Playbook', '2012', '2h 2m', 'After a stint in a mental institution, former teacher Pat Solitano moves back in with his parents and tries to reconcile with his ex-wife. Things get more challenging when Pat meets Tiffany, a mysterious girl with problems of her own.', 'Silver.jpg', 'December 25, 2012');
+(1, 'terminator.jpg', 'The Terminator', '1984', '1h 48m', 'A cyborg assassin is sent back in time to kill Sarah, a waitress, in a bid to stop her son who will wage a long war against his enemy in the future unless the course of history is altered.', 'terminator.mp4', 'October 26, 1984'),
+(2, 'exorcist.jpg', 'The Exorcist', '1973', '2h 12m', 'An actress notices dangerous changes in the behavior and physical make-up of her 12-year-old daughter. Meanwhile, a young priest begins to doubt his faith while dealing with his mother\'s sickness.', 'exorcist.mp4', 'December 26, 1973'),
+(3, 'titanic.jpg', 'Titanic', '1997', '3h 30m', 'Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.', 'titanic.mp4', 'November 18, 1997'),
+(4, 'poltergeist.jpg', 'Poltergeist', '1982', '2h', 'Poltergeist is a 1982 American supernatural horror film directed by Tobe Hooper and written by Steven Spielberg, Michael Grais and Mark Victor from a story by Spielberg. It stars JoBeth Williams, Craig T. Nelson, Heather O\'Rourke, and Beatrice Straight and was produced by Spielberg and Frank Marshall. The film focuses on a suburban family whose home is invaded by malevolent ghosts that abduct their daughter.', 'poltergeist.mp4', 'June 4, 1982'),
+(5, 'mary_poppins3.jpg', 'Mary Poppins', '1964', '2h 19m', 'Mr Banks is looking for a nanny for his two mischievous children and comes across Mary Poppins, an angelic nanny. She not only brings a change in their lives but also spreads happiness.', 'mary_poppins.mp4', 'August 27, 1964'),
+(6, 'park.jpg', 'Jurassic Park', '1993', '2h 8m', 'John Hammond, an entrepreneur, opens a wildlife park containing cloned dinosaurs. However, a breakdown of the island\'s security system causes the creatures to escape and bring about chaos.', 'park.mp4', 'November 4, 2016'),
+(7, 'sleepless.jpg', 'Sleepless in Seattle', '1993', '1h 46m', 'Realising that Sam has still not come to terms with his wife Maggie\'s death, his eight-year-old son Jonah forces him to call a national radio talk show, with the hopes of finding him a companion', 'sleepless.mp4', 'June 25, 1993'),
+(8, 'pretty_woman.jpg', 'Pretty Woman', '1990', '2h 5m', 'Edward, a rich entrepreneur, hires Vivian, a prostitute, to accompany him to a few social events. Trouble ensues when he falls in love with her and they try to bridge the gap between their worlds.', 'pretty_woman.mp4', 'March 23, 1990'),
+(9, '10_things.png', '10 Things I Hate About You', '1999', '1h 39m', 'A high-school boy, Cameron, cannot date Bianca until her anti-social older sister, Kat, has a boyfriend. So, Cameron pays a mysterious boy, Patrick, to charm Kat', '10_things.mp4', 'March 31, 1999'),
+(10, 'forrest.jpg', 'Forrest Gump', '1994', '2h 22m', 'Forrest, a man with low IQ, recounts the early years of his life when he found himself in the middle of key historical events. All he wants now is to be reunited with his childhood sweetheart, Jenny.', 'forrest.mp4', 'June 23, 1994'),
+(11, 'matrix.jpg', 'The Matrix', '1999', '2h 30m', 'When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.', 'matrix.mp4', 'March 31, 1999'),
+(12, 'e_t.jpg', 'E.T. the Extra-Terrestrial', '1982', ' 2h 1m', 'An alien is left behind on Earth and is saved by young Elliot who decides to keep him hidden. While the task force hunts for it, Elliot and his siblings form an emotional bond with their new friend.', 'e_t.mp4', 'June 10, 1982'),
+(13, 'lion_king.jpg', 'The Lion King', '1994', '1h 29m', 's a cub, Simba is forced to leave the Pride Lands after his father Mufasa is murdered by his wicked uncle, Scar. Years later, he returns as a young lion to reclaim his throne', 'lion_king.mp4', 'June 24, 1994'),
+(14, 'oz.jpg', 'The Wizard of Oz', '1939', '1h 52m', 'When a tornado rips through Kansas, Dorothy (Judy Garland) and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard, and en route they meet a Scarecrow (Ray Bolger) that needs a brain, a Tin Man (Jack Haley) missing a heart, and a Cowardly Lion (Bert Lahr) who wants courage', 'oz.mp4', 'August 21, 1939'),
+(15, 'goonies.jpg', 'The Goonies', '1985', '1h 55m', 'A group of west coast kids facing their last days together before a development paves over their homes stumble onto evidence of pirate\'s treasure attracting the attention of a family of criminals.', 'goonies.mp4', 'June 7, 1985'),
+(16, 'jungle_book.jpg', 'The Jungle Book', '1967', '1h 18m', 'Mowgli, a young orphan boy, is found in a basket in the deep jungles of India by Bagheera, a black panther who promptly takes him to Raksha, a mother wolf who has just had cubs. She and her mate, Rama, raise him along with their own cubs and after ten years, Mowgli becomes well acquainted with jungle life and plays with his wolf siblings. Bagheera is pleased with how happy Mowgli is now, but also worries that Mowgli must eventually return to his own kind.', 'jungle_book.mp4', 'October 18, 1967'),
+(17, 'parent_trap.jpg', 'The Parent Trap', '1961', '2h 9m', 'Two identical twin sisters, separated at birth by their parents\' divorce, are reunited years later at a summer camp, where they scheme to bring their parents back together.', 'parent_trap.mp4', 'June 21, 1961'),
+(18, 'pan_movie.jpg', 'Peter Pan\r\n', '1953', '1h 17m', 'Peter Pan and his friend Tinker Bell, a fairy, whisk away siblings Wendy, John and Michael to the island of Never Land, where Captain Hook seeks vengeance against Peter for cutting off his hand.', 'pan_movie.mp4', 'February 5, 1953'),
+(19, 'willy_wonka.jpg', 'Willy Wonka & the Chocolate Factory', '1971', '1h 29m', 'A factory owner gives 5 children a chance to win a lifetime supply of sweets. Charlie, along with four odious children enter the factory. Disasters befall each of the children. Will Charlie survive?', 'willy_wonka.mp4', 'June 30, 1971'),
+(20, 'snoopy.jpg', 'Snoopy Come Home', '1972', '1h 21m', 'Charlie Brown\'s (Chad Webber) beloved dog Snoopy (Bill Melendez) receives a letter from his original owner, Lila (Johanna Baer), who has been sick in the hospital. With his bird friend Woodstock, Snoopy goes to visit Lila, making his way across the country despite seeing \"no dogs allowed\" signs everywhere. When Lila gets better, she asks Snoopy to live with her. After a farewell party, he sets out to live with Lila, leaving Charlie Brown depressed.', 'snoopy.jpg', 'August 9, 1972'),
+(21, 'winne_movie.jpg', 'The Many Adventures of Winnie the Pooh', '1977', '1h 40m', 'Sebastian Cabot narrates the adventures of bumbling bear Winnie the Pooh as he battles a nest of vicious bees over a trove of honey, weathers a terrible wind storm and endures the foibles of the hyperactive tiger Tigger, all while singing and bumbling his way through the Hundred Acre Wood.', 'winne_movie.jpg', 'March 11, 1977');
 
 -- --------------------------------------------------------
 

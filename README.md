@@ -20,7 +20,7 @@ Finally after installing the dependencies, please run "npm start" that would use
 
 ## Where is the Data?
 
-The database is currently in "public/includes/a4_w20_roku.sql".
+The database is currently in "public/includes/a4_flasback_roku.sql".
 Please grab it from there and place it in your phpmyadmin.
 A newer verison of the DB will be uploaded once its ready.
 For the time being, the class build's DB is being used.
