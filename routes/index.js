@@ -16,6 +16,14 @@ router.get('/', (req, res) => {
     res.render('index', { message: "Hello from handlebars!"});
 })
 
+// Other routes you might use
+router.use((req, res) => {
+    res.status(404);
+    res.render("error", { layout: "errorLayout.hbs", errormessage: `you've lost your way a wee bit! "${req.url}" doesn't exisit `});
+
+})
+
+
 router.get('/portfolio', (req, res) => {
     res.render('artwork', {portmessage: "You're on the portfolio page"});
 })
