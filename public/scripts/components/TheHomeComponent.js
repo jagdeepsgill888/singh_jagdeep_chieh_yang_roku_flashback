@@ -50,11 +50,21 @@ export default {
                         <a href="all">All</a>
                     </li>
                 </ul>
-
+              
                 <div class="thumb-wrapper clearfix">
                     <img v-for="media in retrievedMedia" :src="'images/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
                 </div>
-            </div>       
+
+                
+
+              
+			        <!-- <ul class="splide__list">
+                        <li class="splide__slide"><video controls src="video/goonies.mp4"></video></li>
+                        <li class="splide__slide"><video controls src="video/lion_king.mp4"></video></li>
+                        <li class="splide__slide"><video controls src="video/jungle_book.mp4"></video></li>
+                    </ul> -->
+		             
+</div>  
         </div> <!-- end 2-up for media info -->
     </div>
     `,
