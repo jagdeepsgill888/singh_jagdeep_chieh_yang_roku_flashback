@@ -3,24 +3,25 @@ export default {
     
     template: `
         <div class="container">
-            <div class="jumbotron roku-jumbotron">
-                <h1 class="display-4">Welcome to Flashback!</h1>
-                <p class="lead">Before revisiting your favourite movies, tv shows or music from yesteryear, please log in with a valid username and password.</p>
+            <div class="loginPanel">
+                <h1 class="display-4 Loginheading">Welcome to Flashback!</h1>
+                <p class="lead">Please Login Below</p>
+                <img  class="loginIcon"src="images/svgs/person_outline-24px.svg" alt="">
                 <hr class="my-4">
                 <form>
                     <div class="form-row align-items-center">
                         <div class="col-md-3 my-1">
                             <label class="sr-only" for="inlineFormInputName">Name</label>
-                            <input v-model="input.username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
+                            <input v-model="input.username" type="text" class="form-design" id="inlineFormInputName" placeholder="username" required>
                         </div>
 
                         <div class="col-md-3 my-1">
                             <label class="sr-only" for="inlineFormPassword">Name</label>
-                            <input v-model="input.password" type="password" class="form-control" id="inlineFormPassword" placeholder="password" required>
+                            <input v-model="input.password" type="password" class="form-design" id="inlineFormPassword" placeholder="password" required>
                         </div>
 
                         <div class="col-auto my-1">
-                            <button v-on:click.prevent="login()" type="submit" class="btn btn-primary">Go!</button>
+                            <button v-on:click.prevent="login()" type="submit" class="btn btnLogin">Login!</button>
                         </div>
                     </div>
                 </form>            
