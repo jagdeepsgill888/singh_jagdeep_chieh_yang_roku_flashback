@@ -1,4 +1,4 @@
-import { Carousel3d, Slide } from 'vue-carousel-3d';
+const { VueperSlides, VueperSlide } = vueperslides;
 
 export default {
     name: "TheHomeComponent",
@@ -61,10 +61,43 @@ export default {
                 <div class="thumb-wrapper clearfix">
                     <img v-for="media in retrievedMedia" :src="'images/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
                 </div>
+                
+                <div>
+                    <h2>All Movies</h2>
+                <vueper-slides
+                class="no-shadow"
+                :visible-slides="6"
+                :slide-ratio="1 / 4"
+                :gap="3"
+                :dragging-distance="70">
+                    <vueper-slide v-for="media in retrievedMedia" :key="media.id" :image='"images/" + media.movies_cover' class="img-thumbnail rounded float-left media-thumb" @click.native="switchCurrentMedia(media)" />
+                </vueper-slides>
+               </div>
 
-                <carousel-3d>
-            <slide v-for="item in media" :key="item.id" :image='"images/" + item.cover' @click.native="handleMediaView(item)"/>
-        </carousel-3d>
+
+               <div>
+                    <h2>Recently Added</h2>
+                <vueper-slides
+                class="no-shadow"
+                :visible-slides="6"
+                :slide-ratio="1 / 4"
+                :gap="3"
+                :dragging-distance="70">
+                    <vueper-slide v-for="media in retrievedMedia" :key="media.id" :image='"images/" + media.movies_cover' class="img-thumbnail rounded float-left media-thumb" @click.native="switchCurrentMedia(media)" />
+                </vueper-slides>
+               </div>
+
+               <div>
+                    <h2>Popular</h2>
+                <vueper-slides
+                class="no-shadow"
+                :visible-slides="6"
+                :slide-ratio="1 / 4"
+                :gap="3"
+                :dragging-distance="70">
+                    <vueper-slide v-for="media in retrievedMedia" :key="media.id" :image='"images/" + media.movies_cover' class="img-thumbnail rounded float-left media-thumb" @click.native="switchCurrentMedia(media)" />
+                </vueper-slides>
+               </div>
 
                 
 
@@ -80,8 +113,8 @@ export default {
     </div>
     `,
     components: {
-        Carousel3d,
-        Slide
+        VueperSlides,
+        VueperSlide
     },
     data() {
         return {
