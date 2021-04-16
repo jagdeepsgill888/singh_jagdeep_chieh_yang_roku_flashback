@@ -1,3 +1,5 @@
+import { Carousel3d, Slide } from 'vue-carousel-3d';
+
 export default {
     name: "TheHomeComponent",
 
@@ -60,6 +62,10 @@ export default {
                     <img v-for="media in retrievedMedia" :src="'images/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
                 </div>
 
+                <carousel-3d>
+            <slide v-for="item in media" :key="item.id" :image='"images/" + item.cover' @click.native="handleMediaView(item)"/>
+        </carousel-3d>
+
                 
 
               
@@ -73,7 +79,10 @@ export default {
         </div> <!-- end 2-up for media info -->
     </div>
     `,
-
+    components: {
+        Carousel3d,
+        Slide
+    },
     data() {
         return {
             // push first (or random) media object here (selected / filtered on create)
