@@ -17,7 +17,7 @@ export default {
             </div>
 
             <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-            <audio autoplay muted controls :src="'audio/' + currentMediaDetails.songs_audio" class=""></audio>
+            <audio autoplay controls :src="'audio/' + currentMediaDetails.songs_audio" class=""></audio>
             </div>
         </div>
 
@@ -38,10 +38,10 @@ export default {
                 <!-- genres for video -->
                 <ul class="media-genres">
                     <li>
-                        <a href="action">Action</a>
+                        <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="comedy">Comedy</a>
+                        <a href="#/songs">Songs</a>
                     </li>
                     <li>
                         <a href="family">Family</a>
@@ -54,6 +54,12 @@ export default {
                     </li>
                 </ul>
               
+
+                 <!-- testing -->
+                <ul>           
+                <li @click="navToHome()"><p>Home</p></li>
+                <li @click="navToSong()"><p>Music</p></li>		
+			</ul>
                 <div class="thumb-wrapper clearfix">
                     <img v-for="media in retrievedMedia" :src="'images/' + media.songs_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
                 </div>
@@ -79,7 +85,7 @@ export default {
 
             // could add more media types here in future
             mediaTypes: [
-                { iconClass: "fas fa-headphones", description: "audio" },
+                { iconClass: "fas fa-headphones", description: "audio"  },
                 { iconClass: "fas fa-film", description: "video" },
                 { iconClass: "fas fa-tv", description: "television" }
             ],
@@ -112,6 +118,16 @@ export default {
 
         switchCurrentMedia(media) {
             this.currentMediaDetails = media;
+        },
+
+        navToHome() {
+
+            this.$router.push({ name: "home"});
+        },
+    
+        navToSong() {
+    
+            this.$router.push({ name: "songs"});
         }
     }
 }

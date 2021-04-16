@@ -35,10 +35,10 @@ export default {
                 <!-- genres for video -->
                 <ul class="media-genres">
                     <li>
-                        <a href="action">Action</a>
+                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="comedy">Comedy</a>
+                        <a href="#/songs">Songs</a>
                     </li>
                     <li>
                         <a href="family">Family</a>
@@ -50,6 +50,11 @@ export default {
                         <a href="all">All</a>
                     </li>
                 </ul>
+
+                <ul>           
+                <li @click="navToHome()"><p>Home</p></li>
+                <li @click="navToSong()"><p>Music</p></li>		
+			</ul>
               
                 <div class="thumb-wrapper clearfix">
                     <img v-for="media in retrievedMedia" :src="'images/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
@@ -109,6 +114,16 @@ export default {
 
         switchCurrentMedia(media) {
             this.currentMediaDetails = media;
+        },
+
+        navToHome() {
+
+            this.$router.push({ name: "home"});
+        },
+    
+        navToSong() {
+    
+            this.$router.push({ name: "songs"});
         }
     }
 }

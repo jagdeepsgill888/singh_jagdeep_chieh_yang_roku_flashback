@@ -1,5 +1,6 @@
 import LoginComponent from './components/TheLoginComponent.js';
 import AllUsers from './components/TheAllUsersComponents.js';
+import UserComponent from './components/TheUserComponent.js';
 import HomeComponent from './components/TheHomeComponent.js';
 import SongComponent from './components/TheSongComponent.js';
 
