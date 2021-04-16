@@ -1,6 +1,7 @@
 import LoginComponent from './components/TheLoginComponent.js';
 import AllUsers from './components/TheAllUsersComponents.js';
 import HomeComponent from './components/TheHomeComponent.js';
+import SongComponent from './components/TheSongComponent.js';
 
 const router = new VueRouter({
     routes: [
@@ -14,7 +15,8 @@ const router = new VueRouter({
             }
         } },
         { path: '/users', name: 'users', component: AllUsers },
-        { path: '/home', name: 'home', component: HomeComponent, props: true }
+        { path: '/home', name: 'home', component: HomeComponent, props: true },
+        { path: '/songs', name: 'songs', component: SongComponent, props: true}
     ]
 });
 
