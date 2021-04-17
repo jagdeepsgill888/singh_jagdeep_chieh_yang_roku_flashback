@@ -102,6 +102,7 @@ nav:not(.side-nav) ul li {
   font-size: 1.5em;
   padding-top: 1em;
   font-weight: bolder;
+  color: #ae53ff;
 }
 .media-details {
   font-size: 1.2em;
@@ -118,6 +119,10 @@ nav:not(.side-nav) ul li {
 .side-nav {
   background: #020202;
 }
+.watchlistadd:hover {
+  color: #6c3c97;
+}
+
 .media-type {
   list-style-type: none;
   margin-bottom: 0;
@@ -141,6 +146,7 @@ nav:not(.side-nav) ul li {
   background: #000;
   margin: 0;
   padding: 1em 1em 1em 1.5em;
+  text-align: center;
 }
 .media-genres li {
   display: inline-block;
@@ -151,7 +157,7 @@ nav:not(.side-nav) ul li {
   text-decoration: none;
 }
 .media-genres li a:hover {
-  color: #6c3c97;
+  color: #ae53ff;
 }
 .media-genres li::after {
   content: "|";
@@ -226,6 +232,12 @@ footer ul li {
 .roku-jumbotron {
   color: #333;
   margin: 70px 30px 0 !important;
+}
+
+@media screen and (min-width: 577px) {
+  .col-sm-9 {
+    flex: 0 0 100%;
+  }
 }
 @media screen and (min-width: 768px) {
   .user-message {

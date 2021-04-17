@@ -1,3 +1,5 @@
+const { VueperSlides, VueperSlide } = vueperslides;
+
 export default {
     name: "songs",
 
@@ -5,6 +7,26 @@ export default {
   
     template: `
     <div class="container">
+
+    <div class="col-12 media-info">
+                <!-- genres for video -->
+                <ul class="media-genres">
+                    <li>
+                         <a href="/">Home</a>
+                    </li>
+                    <li>
+                         <a href="/">Movies</a>
+                    </li>
+                    <li>
+                        <a href="#/songs">Songs</a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="#/shows">TV Shows</a>
+                    </li> -->
+                </ul>
+            </div>
+
         <div class="row">
             <div class="col-12 order-2 order-md-1 col-md-3 media-container">
                 <h4 class="media-title">{{currentMediaDetails.songs_title}}</h4>
@@ -22,62 +44,70 @@ export default {
         </div>
 
         <div class="row"> <!-- 2-up for nav and media info -->
-            <nav class="col-12 col-sm-3 side-nav">
-                <ul class="media-type">
-                    <li v-for="media in mediaTypes" :data-type="media.description">
-                        <span>
-                            <i v-bind:class="[media.iconClass]"></i>
-                        </span>
-                        
-                        <span class="d-none d-md-block">{{ media.description }}</span>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="col-12 col-sm-9 media-info">
+            
+            <div class="col-12 media-info">
                 <!-- genres for video -->
                 <ul class="media-genres">
                     <li>
-                        <a href="/">Home</a>
+                        <a @click.prevent="filteredMovies('1990')" href="">1990</a>
                     </li>
                     <li>
-                        <a href="#/songs">Songs</a>
+                        <a @click.prevent="filteredMovies('1980')" href="">1980</a>
                     </li>
                     <li>
-                        <a href="family">Family</a>
+                        <a @click.prevent="filteredMovies('1970')" href="">1970</a>
                     </li>
+
                     <li>
-                        <a href="fantasyr">Fantasy</a>
-                    </li>
-                    <li>
-                        <a href="all">All</a>
+                        <a @click.prevent="filteredMovies('1960')" href="">1960</a>
                     </li>
                 </ul>
               
 
                  <!-- testing -->
-                <ul>           
+                <!-- <ul>           
                 <li @click="navToHome()"><p>Home</p></li>
                 <li @click="navToSong()"><p>Music</p></li>		
-			</ul>
+			</ul> -->
                 <div class="thumb-wrapper clearfix">
                     <img v-for="media in retrievedMedia" :src="'images/' + media.songs_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
                 </div>
 
-                
+                <div>
+                    <h2>All Songs</h2>
+                <vueper-slides
+                class="no-shadow"
+                :visible-slides="6"
+                :slide-ratio="1 / 4"
+                :gap="3"
+                :dragging-distance="70">
+                    <vueper-slide v-for="media in retrievedMedia" :key="media.id" :image='"images/" + media.songs_cover' class="img-thumbnail rounded float-left media-thumb" @click.native="switchCurrentMedia(media)" />
+                </vueper-slides>
+               </div>
+
+               <div>
+                    <h2>Popular</h2>
+                <vueper-slides
+                class="no-shadow"
+                :visible-slides="6"
+                :slide-ratio="1 / 4"
+                :gap="3"
+                :dragging-distance="70">
+                    <vueper-slide v-for="media in retrievedMedia" :key="media.id" :image='"images/" + media.songs_cover' class="img-thumbnail rounded float-left media-thumb" @click.native="switchCurrentMedia(media)" />
+                </vueper-slides>
+               </div>
+
 
               
-			        <!-- <ul class="splide__list">
-                        <li class="splide__slide"><video controls src="video/goonies.mp4"></video></li>
-                        <li class="splide__slide"><video controls src="video/lion_king.mp4"></video></li>
-                        <li class="splide__slide"><video controls src="video/jungle_book.mp4"></video></li>
-                    </ul> -->
-		             
+			       
 </div>  
         </div> <!-- end 2-up for media info -->
     </div>
     `,
-
+ components: {
+    VueperSlides,
+    VueperSlide
+},
     data() {
         return {
             // push first (or random) media object here (selected / filtered on create)
