@@ -28,7 +28,7 @@
 
 .fixed-bottomNav {
   position: fixed;
-  top: 580px;
+  top: 700px;
   right: 0;
   left: 0;
   z-index: 1030;
@@ -39,9 +39,9 @@
   margin: 30px;
 }
 
-// .socialMedia {
-//   text-align: center;
-// }
+.socialMedia {
+  padding-bottom: 20px;
+}
 
 // @media screen and (min-width: 500px) {
 //   .UserNavMobile {
