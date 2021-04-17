@@ -72,9 +72,9 @@ export default {
                 <li @click="navToSong()"><p>Music</p></li>		
 			</ul> -->
               
-                <div class="thumb-wrapper clearfix">
+                <!-- <div class="thumb-wrapper clearfix">
                     <img v-for="media in retrievedMedia" :src="'images/' + media.movies_cover" alt="media thumb" class="img-thumbnail rounded float-left media-thumb" @click="switchCurrentMedia(media)">
-                </div>
+                </div> -->
                 
                 <div>
                     <h2>Movies</h2>
@@ -84,7 +84,7 @@ export default {
                 :slide-ratio="1 / 4"
                 :gap="3"
                 :dragging-distance="70">
-                    <vueper-slide v-for="media in filteredMovies" :key="media.id" :image='"images/" + media.movies_cover' class="img-thumbnail rounded float-left media-thumb" @click.native="switchCurrentMedia(media)" />
+                    <vueper-slide v-for="media in retrievedMedia" :key="media.id" :image='"images/" + media.movies_cover' class="img-thumbnail rounded float-left media-thumb" @click.native="switchCurrentMedia(media)" />
                 </vueper-slides>
                </div>
 
@@ -161,7 +161,7 @@ export default {
         fetch(url) 
           .then(res => res.json())
           .then(data => {
-            this.retrievedMedia = this.movies.filteredMovies = data;
+            this.retrievedMedia = data;
             
             // pick a random media object from the array
             this.currentMediaDetails = data[Math.floor(Math.random() * data.length)];
@@ -174,10 +174,10 @@ export default {
             this.currentMediaDetails = media;
         },
 
-        filteredMovies(genre) {
-         this.filteredMovies = movies.filter( movie => movie.movies_genre.includes(genre));
-         debugger;
-        },
+        // filteredMovies(genre) {
+        //  this.filteredMovies = movies.filter( movie => movie.movies_genre.includes(genre));
+        //  debugger;
+        // },
 
         navToHome() {
 

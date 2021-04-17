@@ -1,0 +1,53 @@
+.UserNavMobile {
+  margin-left: 10px;
+  margin-top: 30px;
+  //   text-align: center;
+
+  svg,
+  img {
+    width: 50px;
+  }
+}
+
+.copyright {
+  margin: 20%;
+}
+
+// .UserNavMobile ul li {
+//   display: inline;
+// }
+
+.bottomGrid {
+  text-align: center;
+  margin: 30px;
+}
+
+// .socialMedia {
+//   text-align: center;
+// }
+
+// @media screen and (min-width: 500px) {
+//   .UserNavMobile {
+//     text-align: center;
+//   }
+// }
+
+@media (min-width: 992px) {
+  .UserNavMobile {
+    display: none;
+  }
+  .copyright {
+    grid-area: copyright;
+  }
+  .socialMedia {
+    grid-area: socialMedia;
+  }
+
+  .bottomGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "copyright socialMedia";
+  }
+}

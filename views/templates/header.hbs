@@ -1,16 +1,35 @@
 <div class="container-fluid">
 	<div class="row">
 		<header class="col-sm-12 fixed-top">
-			<img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span>
-			<nav class="float-right">
-				<ul v-if="currentUser">
-					{{!-- <li><i class="fas fa-user-circle"></i></li> --}}
-					<li v-if="currentUser.user_avatar"><img class="small-avatar-rounded"
-							:src='"images/" + currentUser.user_avatar' alt=""></li>
-					<li v-if="currentUser.user_admin"><i class="fas fa-cog"></i></li>
-					<li @click="logout"><i class="fas fa-power-off"></i></li>
-				</ul>
-			</nav>
+			<ul class="media-genres">
+				<li><img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span></li>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/">Movies</a>
+				</li>
+				<li>
+					<a href="#/songs">Songs</a>
+				</li>
+				<nav class="UserNavDesk">
+					<ul v-if="currentUser">
+						{{!-- <li><i class="fas fa-user-circle"></i></li> --}}
+						<li>
+							<img src="images/svgs/home_icon.svg" alt="">
+						</li>
+						<li>
+							<img src="images/svgs/search_icon.svg" alt="">
+						</li>
+						{{!-- <li>
+							<img src="images/svgs/user_settings2.svg" alt="">
+						</li> --}}
+						<li v-if="currentUser.user_avatar"><img class="small-avatar-rounded"
+								:src='"images/" + currentUser.user_avatar' alt=""></li>
+						<li v-if="currentUser.user_admin"><i class="fas fa-cog"></i></li>
+						<li @click="logout"><i class="fas fa-power-off"></i></li>
+					</ul>
+				</nav>
 		</header>
 	</div>
 
