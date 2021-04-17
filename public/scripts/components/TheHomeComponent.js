@@ -77,14 +77,14 @@ export default {
                 </div>
                 
                 <div>
-                    <h2>All Movies</h2>
+                    <h2>Movies</h2>
                 <vueper-slides
                 class="no-shadow"
                 :visible-slides="6"
                 :slide-ratio="1 / 4"
                 :gap="3"
                 :dragging-distance="70">
-                    <vueper-slide v-for="media in retrievedMedia" :key="media.id" :image='"images/" + media.movies_cover' class="img-thumbnail rounded float-left media-thumb" @click.native="switchCurrentMedia(media)" />
+                    <vueper-slide v-for="media in filteredMovies" :key="media.id" :image='"images/" + media.movies_cover' class="img-thumbnail rounded float-left media-thumb" @click.native="switchCurrentMedia(media)" />
                 </vueper-slides>
                </div>
 
@@ -161,7 +161,7 @@ export default {
         fetch(url) 
           .then(res => res.json())
           .then(data => {
-            this.retrievedMedia = data;
+            this.retrievedMedia = this.movies.filteredMovies = data;
             
             // pick a random media object from the array
             this.currentMediaDetails = data[Math.floor(Math.random() * data.length)];
@@ -174,10 +174,10 @@ export default {
             this.currentMediaDetails = media;
         },
 
-        // filteredMovies(genre) {
-        //  this.filteredMovies = movies.filter( movie => movies_genre.includes(genre));
-        //  debugger;
-        // },
+        filteredMovies(genre) {
+         this.filteredMovies = movies.filter( movie => movie.movies_genre.includes(genre));
+         debugger;
+        },
 
         navToHome() {
 
