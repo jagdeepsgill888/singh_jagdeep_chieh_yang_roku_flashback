@@ -1,7 +1,16 @@
+.deskUI {
+  display: none;
+}
+
+.topNavManin img {
+  width: 200px;
+}
+
 .UserNavMobile {
   margin-left: 10px;
   margin-top: 30px;
-  //   text-align: center;
+  text-align: center;
+  padding-left: 80px;
 
   svg,
   img {
@@ -17,6 +26,14 @@
 //   display: inline;
 // }
 
+.fixed-bottomNav {
+  position: fixed;
+  top: 580px;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  background-color: #000;
+}
 .bottomGrid {
   text-align: center;
   margin: 30px;
@@ -32,7 +49,50 @@
 //   }
 // }
 
+// top nav
+
+.topNavGrid {
+  display: grid;
+  text-align: center;
+  padding-top: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "topNavManin"
+    "UserNavDesk";
+}
+
+.topNavManin {
+  grid-area: topNavManin;
+}
+.UserNavDesk {
+  grid-area: UserNavDesk;
+}
+
+.topNavManin li {
+  display: inline-block;
+}
+.topNavManin li a {
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+.topNavManin li a:hover {
+  color: #ae53ff;
+}
+.topNavManin li::after {
+  padding: 0 8px 0 13px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.topNavManin li:last-of-type::after {
+  content: none;
+}
+
 @media (min-width: 992px) {
+  .deskUI {
+    display: block;
+  }
   .UserNavMobile {
     display: none;
   }
@@ -50,4 +110,22 @@
     gap: 0px 0px;
     grid-template-areas: "copyright socialMedia";
   }
+
+  .topNavGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "topNavManin UserNavDesk";
+  }
+  .topNavManin {
+    grid-area: topNavManin;
+  }
+  .UserNavDesk {
+    grid-area: UserNavDesk;
+  }
+
+  //   .UserNavDesk {
+  //     text-align: right;
+  //   }
 }

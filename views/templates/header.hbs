@@ -1,18 +1,20 @@
 <div class="container-fluid">
 	<div class="row">
 		<header class="col-sm-12 fixed-top">
-			<ul class="media-genres">
-				<li><img src="images/roku.svg" alt="Roku logo" width="90"><span>FlashBack</span></li>
-				<li>
-					<a href="/">Home</a>
-				</li>
-				<li>
-					<a href="/">Movies</a>
-				</li>
-				<li>
-					<a href="#/songs">Songs</a>
-				</li>
-				<nav class="UserNavDesk">
+			<div class="topNavGrid">
+				<ul class="topNavManin">
+					<li><img src="images/logo/logo_1.svg" alt="Roku logo" class="logoNav" width="90"></li>
+					{{!-- <li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/">Movies</a>
+					</li>
+					<li>
+						<a href="#/songs">Songs</a>
+					</li> --}}
+				</ul>
+				<nav class="UserNavDesk deskUI">
 					<ul v-if="currentUser">
 						{{!-- <li><i class="fas fa-user-circle"></i></li> --}}
 						<li>
@@ -30,6 +32,7 @@
 						<li @click="logout"><i class="fas fa-power-off"></i></li>
 					</ul>
 				</nav>
+			</div>
 		</header>
 	</div>
 
