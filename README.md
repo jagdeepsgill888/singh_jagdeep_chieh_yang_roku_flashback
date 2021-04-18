@@ -27,6 +27,8 @@ For the time being, the class build's DB is being used.
 
 ## Where is the Prototype?
 
+[Database and Media Link](https://drive.google.com/drive/folders/1UWUfGl1WlhyDe3UpL0oWQYASnAHFS9A1?usp=sharing)
+
 [Mobile Prototype](https://xd.adobe.com/view/c8638030-343e-4548-95d1-b5f55d449e6e-9d30/)
 
 [Desktop Prototype](https://xd.adobe.com/view/791e8a0a-8a15-4f19-8fae-6402d2d3c6d6-2c4d/)
