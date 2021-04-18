@@ -55,7 +55,7 @@ export default {
 
             <div class="col-12 media-info">
                 <!-- genres for video -->
-                <ul class="media-genres">
+                <!-- <ul class="media-genres">
                     <li>
                         <a @click.prevent="filteredMovies('Family')" href="">Family</a>
                     </li>
@@ -65,7 +65,7 @@ export default {
                     <li>
                         <a @click.prevent="filteredMovies('All')" href="">All</a>
                     </li>
-                </ul>
+                </ul> -->
 
                 <!-- <ul>           
                 <li @click="navToHome()"><p>Home</p></li>
@@ -77,7 +77,7 @@ export default {
                 </div> -->
                 
                 <div>
-                    <h2>Movies</h2>
+                    <h2 class="adultCat">Movies</h2>
                 <vueper-slides
                 class="no-shadow"
                 :visible-slides="6"
@@ -90,7 +90,7 @@ export default {
 
 
                <div>
-                    <h2>Recently Added</h2>
+                    <h2 class="adultCat">Recently Added</h2>
                 <vueper-slides
                 class="no-shadow"
                 :visible-slides="6"
@@ -102,7 +102,7 @@ export default {
                </div>
 
                <div>
-                    <h2>Popular</h2>
+                    <h2 class="adultCat">Popular</h2>
                 <vueper-slides
                 class="no-shadow"
                 :visible-slides="6"
