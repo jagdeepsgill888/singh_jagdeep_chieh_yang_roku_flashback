@@ -7,25 +7,7 @@ export default {
 
     template: `
     <div class="container">
-    <div class="col-12 media-info">
-                <!-- genres for video -->
-                <ul class="media-genres">
-                    <li>
-                         <a href="/">Home</a>
-                    </li>
-                    <li>
-                         <a href="/">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#/songs">Songs</a>
-                    </li>
-
-                    <!-- <li>
-                        <a href="#/shows">TV Shows</a>
-                    </li> -->
-                </ul>
-            </div>
-
+   
         <div class="row">
             <div class="media-container">
                 <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
