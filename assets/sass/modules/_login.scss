@@ -70,4 +70,32 @@
     padding-left: 50px;
     margin-left: 140px;
   }
+
+  .otherUserGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "addUser editUser";
+  }
+
+  .addUser {
+    grid-area: addUser;
+  }
+  .editUser {
+    grid-area: editUser;
+    img {
+      width: 136px;
+    }
+  }
+
+  // .addUser {
+  //   text-align: left;
+  // }
+
+  // .editUser {
+  //   img {
+  //     width: 136px;
+  //   }
+  // }
 }
