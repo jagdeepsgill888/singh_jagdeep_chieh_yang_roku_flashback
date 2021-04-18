@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 14, 2021 at 04:36 AM
+-- Generation Time: Apr 17, 2021 at 03:11 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -406,6 +406,26 @@ INSERT INTO `tbl_genre` (`genre_id`, `genre_name`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_kmovies`
+--
+
+DROP TABLE IF EXISTS `tbl_kmovies`;
+CREATE TABLE IF NOT EXISTS `tbl_kmovies` (
+  `kmovies_id` mediumint(8) NOT NULL AUTO_INCREMENT,
+  `kmovies_cover` varchar(75) NOT NULL DEFAULT 'cover_default.jpg',
+  `kmovies_title` varchar(125) NOT NULL,
+  `kmovies_year` varchar(5) NOT NULL,
+  `kmovies_runtime` varchar(25) NOT NULL,
+  `kmovies_storyline` text NOT NULL,
+  `kmovies_trailer` varchar(75) NOT NULL,
+  `kmovies_release` varchar(125) NOT NULL DEFAULT 'trailer_default.jpg	',
+  `kmovies_genre` varchar(200) NOT NULL,
+  PRIMARY KEY (`kmovies_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_language`
 --
 
@@ -653,6 +673,7 @@ CREATE TABLE IF NOT EXISTS `tbl_movies` (
   `movies_storyline` text NOT NULL,
   `movies_trailer` varchar(75) NOT NULL DEFAULT 'trailer_default.jpg',
   `movies_release` varchar(125) NOT NULL,
+  `movies_genre` varchar(200) NOT NULL,
   PRIMARY KEY (`movies_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
@@ -660,28 +681,28 @@ CREATE TABLE IF NOT EXISTS `tbl_movies` (
 -- Dumping data for table `tbl_movies`
 --
 
-INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_year`, `movies_runtime`, `movies_storyline`, `movies_trailer`, `movies_release`) VALUES
-(1, 'terminator.jpg', 'The Terminator', '1984', '1h 48m', 'A cyborg assassin is sent back in time to kill Sarah, a waitress, in a bid to stop her son who will wage a long war against his enemy in the future unless the course of history is altered.', 'terminator.mp4', 'October 26, 1984'),
-(2, 'exorcist.jpg', 'The Exorcist', '1973', '2h 12m', 'An actress notices dangerous changes in the behavior and physical make-up of her 12-year-old daughter. Meanwhile, a young priest begins to doubt his faith while dealing with his mother\'s sickness.', 'exorcist.mp4', 'December 26, 1973'),
-(3, 'titanic.jpg', 'Titanic', '1997', '3h 30m', 'Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.', 'titanic.mp4', 'November 18, 1997'),
-(4, 'poltergeist.jpg', 'Poltergeist', '1982', '2h', 'Poltergeist is a 1982 American supernatural horror film directed by Tobe Hooper and written by Steven Spielberg, Michael Grais and Mark Victor from a story by Spielberg. It stars JoBeth Williams, Craig T. Nelson, Heather O\'Rourke, and Beatrice Straight and was produced by Spielberg and Frank Marshall. The film focuses on a suburban family whose home is invaded by malevolent ghosts that abduct their daughter.', 'poltergeist.mp4', 'June 4, 1982'),
-(5, 'mary_poppins3.jpg', 'Mary Poppins', '1964', '2h 19m', 'Mr Banks is looking for a nanny for his two mischievous children and comes across Mary Poppins, an angelic nanny. She not only brings a change in their lives but also spreads happiness.', 'mary_poppins.mp4', 'August 27, 1964'),
-(6, 'park.jpg', 'Jurassic Park', '1993', '2h 8m', 'John Hammond, an entrepreneur, opens a wildlife park containing cloned dinosaurs. However, a breakdown of the island\'s security system causes the creatures to escape and bring about chaos.', 'park.mp4', 'November 4, 2016'),
-(7, 'sleepless.jpg', 'Sleepless in Seattle', '1993', '1h 46m', 'Realising that Sam has still not come to terms with his wife Maggie\'s death, his eight-year-old son Jonah forces him to call a national radio talk show, with the hopes of finding him a companion', 'sleepless.mp4', 'June 25, 1993'),
-(8, 'pretty_woman.jpg', 'Pretty Woman', '1990', '2h 5m', 'Edward, a rich entrepreneur, hires Vivian, a prostitute, to accompany him to a few social events. Trouble ensues when he falls in love with her and they try to bridge the gap between their worlds.', 'pretty_woman.mp4', 'March 23, 1990'),
-(9, '10_things.png', '10 Things I Hate About You', '1999', '1h 39m', 'A high-school boy, Cameron, cannot date Bianca until her anti-social older sister, Kat, has a boyfriend. So, Cameron pays a mysterious boy, Patrick, to charm Kat', '10_things.mp4', 'March 31, 1999'),
-(10, 'forrest.jpg', 'Forrest Gump', '1994', '2h 22m', 'Forrest, a man with low IQ, recounts the early years of his life when he found himself in the middle of key historical events. All he wants now is to be reunited with his childhood sweetheart, Jenny.', 'forrest.mp4', 'June 23, 1994'),
-(11, 'matrix.jpg', 'The Matrix', '1999', '2h 30m', 'When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.', 'matrix.mp4', 'March 31, 1999'),
-(12, 'e_t.jpg', 'E.T. the Extra-Terrestrial', '1982', ' 2h 1m', 'An alien is left behind on Earth and is saved by young Elliot who decides to keep him hidden. While the task force hunts for it, Elliot and his siblings form an emotional bond with their new friend.', 'e_t.mp4', 'June 10, 1982'),
-(13, 'lion_king.jpg', 'The Lion King', '1994', '1h 29m', 's a cub, Simba is forced to leave the Pride Lands after his father Mufasa is murdered by his wicked uncle, Scar. Years later, he returns as a young lion to reclaim his throne', 'lion_king.mp4', 'June 24, 1994'),
-(14, 'oz.jpg', 'The Wizard of Oz', '1939', '1h 52m', 'When a tornado rips through Kansas, Dorothy (Judy Garland) and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard, and en route they meet a Scarecrow (Ray Bolger) that needs a brain, a Tin Man (Jack Haley) missing a heart, and a Cowardly Lion (Bert Lahr) who wants courage', 'oz.mp4', 'August 21, 1939'),
-(15, 'goonies.jpg', 'The Goonies', '1985', '1h 55m', 'A group of west coast kids facing their last days together before a development paves over their homes stumble onto evidence of pirate\'s treasure attracting the attention of a family of criminals.', 'goonies.mp4', 'June 7, 1985'),
-(16, 'jungle_book.jpg', 'The Jungle Book', '1967', '1h 18m', 'Mowgli, a young orphan boy, is found in a basket in the deep jungles of India by Bagheera, a black panther who promptly takes him to Raksha, a mother wolf who has just had cubs. She and her mate, Rama, raise him along with their own cubs and after ten years, Mowgli becomes well acquainted with jungle life and plays with his wolf siblings. Bagheera is pleased with how happy Mowgli is now, but also worries that Mowgli must eventually return to his own kind.', 'jungle_book.mp4', 'October 18, 1967'),
-(17, 'parent_trap.jpg', 'The Parent Trap', '1961', '2h 9m', 'Two identical twin sisters, separated at birth by their parents\' divorce, are reunited years later at a summer camp, where they scheme to bring their parents back together.', 'parent_trap.mp4', 'June 21, 1961'),
-(18, 'pan_movie.jpg', 'Peter Pan\r\n', '1953', '1h 17m', 'Peter Pan and his friend Tinker Bell, a fairy, whisk away siblings Wendy, John and Michael to the island of Never Land, where Captain Hook seeks vengeance against Peter for cutting off his hand.', 'pan_movie.mp4', 'February 5, 1953'),
-(19, 'willy_wonka.jpg', 'Willy Wonka & the Chocolate Factory', '1971', '1h 29m', 'A factory owner gives 5 children a chance to win a lifetime supply of sweets. Charlie, along with four odious children enter the factory. Disasters befall each of the children. Will Charlie survive?', 'willy_wonka.mp4', 'June 30, 1971'),
-(20, 'snoopy.jpg', 'Snoopy Come Home', '1972', '1h 21m', 'Charlie Brown\'s (Chad Webber) beloved dog Snoopy (Bill Melendez) receives a letter from his original owner, Lila (Johanna Baer), who has been sick in the hospital. With his bird friend Woodstock, Snoopy goes to visit Lila, making his way across the country despite seeing \"no dogs allowed\" signs everywhere. When Lila gets better, she asks Snoopy to live with her. After a farewell party, he sets out to live with Lila, leaving Charlie Brown depressed.', 'snoopy.jpg', 'August 9, 1972'),
-(21, 'winne_movie.jpg', 'The Many Adventures of Winnie the Pooh', '1977', '1h 40m', 'Sebastian Cabot narrates the adventures of bumbling bear Winnie the Pooh as he battles a nest of vicious bees over a trove of honey, weathers a terrible wind storm and endures the foibles of the hyperactive tiger Tigger, all while singing and bumbling his way through the Hundred Acre Wood.', 'winne_movie.jpg', 'March 11, 1977');
+INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_year`, `movies_runtime`, `movies_storyline`, `movies_trailer`, `movies_release`, `movies_genre`) VALUES
+(1, 'terminator.jpg', 'The Terminator', '1984', '1h 48m', 'A cyborg assassin is sent back in time to kill Sarah, a waitress, in a bid to stop her son who will wage a long war against his enemy in the future unless the course of history is altered.', 'terminator.mp4', 'October 26, 1984', 'Thriller,Action'),
+(2, 'exorcist.jpg', 'The Exorcist', '1973', '2h 12m', 'An actress notices dangerous changes in the behavior and physical make-up of her 12-year-old daughter. Meanwhile, a young priest begins to doubt his faith while dealing with his mother\'s sickness.', 'exorcist.mp4', 'December 26, 1973', 'Thriller'),
+(3, 'titanic.jpg', 'Titanic', '1997', '3h 30m', 'Seventeen-year-old Rose hails from an aristocratic family and is set to be married. When she boards the Titanic, she meets Jack Dawson, an artist, and falls in love with him.', 'titanic.mp4', 'November 18, 1997', 'Romatic'),
+(4, 'poltergeist.jpg', 'Poltergeist', '1982', '2h', 'Poltergeist is a 1982 American supernatural horror film directed by Tobe Hooper and written by Steven Spielberg, Michael Grais and Mark Victor from a story by Spielberg. It stars JoBeth Williams, Craig T. Nelson, Heather O\'Rourke, and Beatrice Straight and was produced by Spielberg and Frank Marshall. The film focuses on a suburban family whose home is invaded by malevolent ghosts that abduct their daughter.', 'poltergeist.mp4', 'June 4, 1982', 'Family'),
+(5, 'mary_poppins3.jpg', 'Mary Poppins', '1964', '2h 19m', 'Mr Banks is looking for a nanny for his two mischievous children and comes across Mary Poppins, an angelic nanny. She not only brings a change in their lives but also spreads happiness.', 'mary_poppins.mp4', 'August 27, 1964', ' Family'),
+(6, 'park.jpg', 'Jurassic Park', '1993', '2h 8m', 'John Hammond, an entrepreneur, opens a wildlife park containing cloned dinosaurs. However, a breakdown of the island\'s security system causes the creatures to escape and bring about chaos.', 'park.mp4', 'November 4, 2016', 'Action, Family'),
+(7, 'sleepless.jpg', 'Sleepless in Seattle', '1993', '1h 46m', 'Realising that Sam has still not come to terms with his wife Maggie\'s death, his eight-year-old son Jonah forces him to call a national radio talk show, with the hopes of finding him a companion', 'sleepless.mp4', 'June 25, 1993', 'Romatic'),
+(8, 'pretty_woman.jpg', 'Pretty Woman', '1990', '2h 5m', 'Edward, a rich entrepreneur, hires Vivian, a prostitute, to accompany him to a few social events. Trouble ensues when he falls in love with her and they try to bridge the gap between their worlds.', 'pretty_woman.mp4', 'March 23, 1990', 'Romatic'),
+(9, '10_things.png', '10 Things I Hate About You', '1999', '1h 39m', 'A high-school boy, Cameron, cannot date Bianca until her anti-social older sister, Kat, has a boyfriend. So, Cameron pays a mysterious boy, Patrick, to charm Kat', '10_things.mp4', 'March 31, 1999', 'Romatic'),
+(10, 'forrest.jpg', 'Forrest Gump', '1994', '2h 22m', 'Forrest, a man with low IQ, recounts the early years of his life when he found himself in the middle of key historical events. All he wants now is to be reunited with his childhood sweetheart, Jenny.', 'forrest.mp4', 'June 23, 1994', ' Family'),
+(11, 'matrix.jpg', 'The Matrix', '1999', '2h 30m', 'When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.', 'matrix.mp4', 'March 31, 1999', 'Thriller,Action'),
+(12, 'e_t.jpg', 'E.T. the Extra-Terrestrial', '1982', ' 2h 1m', 'An alien is left behind on Earth and is saved by young Elliot who decides to keep him hidden. While the task force hunts for it, Elliot and his siblings form an emotional bond with their new friend.', 'e_t.mp4', 'June 10, 1982', 'Family'),
+(13, 'lion_king.jpg', 'The Lion King', '1994', '1h 29m', 's a cub, Simba is forced to leave the Pride Lands after his father Mufasa is murdered by his wicked uncle, Scar. Years later, he returns as a young lion to reclaim his throne', 'lion_king.mp4', 'June 24, 1994', 'Family'),
+(14, 'oz.jpg', 'The Wizard of Oz', '1939', '1h 52m', 'When a tornado rips through Kansas, Dorothy (Judy Garland) and her dog, Toto, are whisked away in their house to the magical land of Oz. They follow the Yellow Brick Road toward the Emerald City to meet the Wizard, and en route they meet a Scarecrow (Ray Bolger) that needs a brain, a Tin Man (Jack Haley) missing a heart, and a Cowardly Lion (Bert Lahr) who wants courage', 'oz.mp4', 'August 21, 1939', 'Family'),
+(15, 'goonies.jpg', 'The Goonies', '1985', '1h 55m', 'A group of west coast kids facing their last days together before a development paves over their homes stumble onto evidence of pirate\'s treasure attracting the attention of a family of criminals.', 'goonies.mp4', 'June 7, 1985', 'Family'),
+(16, 'jungle_book.jpg', 'The Jungle Book', '1967', '1h 18m', 'Mowgli, a young orphan boy, is found in a basket in the deep jungles of India by Bagheera, a black panther who promptly takes him to Raksha, a mother wolf who has just had cubs. She and her mate, Rama, raise him along with their own cubs and after ten years, Mowgli becomes well acquainted with jungle life and plays with his wolf siblings. Bagheera is pleased with how happy Mowgli is now, but also worries that Mowgli must eventually return to his own kind.', 'jungle_book.mp4', 'October 18, 1967', 'Family'),
+(17, 'parent_trap.jpg', 'The Parent Trap', '1961', '2h 9m', 'Two identical twin sisters, separated at birth by their parents\' divorce, are reunited years later at a summer camp, where they scheme to bring their parents back together.', 'parent_trap.mp4', 'June 21, 1961', 'Family'),
+(18, 'pan_movie.jpg', 'Peter Pan\r\n', '1953', '1h 17m', 'Peter Pan and his friend Tinker Bell, a fairy, whisk away siblings Wendy, John and Michael to the island of Never Land, where Captain Hook seeks vengeance against Peter for cutting off his hand.', 'pan_movie.mp4', 'February 5, 1953', 'Family'),
+(19, 'willy_wonka.jpg', 'Willy Wonka & the Chocolate Factory', '1971', '1h 29m', 'A factory owner gives 5 children a chance to win a lifetime supply of sweets. Charlie, along with four odious children enter the factory. Disasters befall each of the children. Will Charlie survive?', 'willy_wonka.mp4', 'June 30, 1971', 'Family'),
+(20, 'snoopy.jpg', 'Snoopy Come Home', '1972', '1h 21m', 'Charlie Brown\'s (Chad Webber) beloved dog Snoopy (Bill Melendez) receives a letter from his original owner, Lila (Johanna Baer), who has been sick in the hospital. With his bird friend Woodstock, Snoopy goes to visit Lila, making his way across the country despite seeing \"no dogs allowed\" signs everywhere. When Lila gets better, she asks Snoopy to live with her. After a farewell party, he sets out to live with Lila, leaving Charlie Brown depressed.', 'snoopy.mp4', 'August 9, 1972', 'Family'),
+(21, 'winne_movie.jpg', 'The Many Adventures of Winnie the Pooh', '1977', '1h 40m', 'Sebastian Cabot narrates the adventures of bumbling bear Winnie the Pooh as he battles a nest of vicious bees over a trove of honey, weathers a terrible wind storm and endures the foibles of the hyperactive tiger Tigger, all while singing and bumbling his way through the Hundred Acre Wood.', 'winne_movie.mp4', 'March 11, 1977', '');
 
 -- --------------------------------------------------------
 
@@ -984,6 +1005,45 @@ INSERT INTO `tbl_mov_studio` (`mov_studio_id`, `movies_id`, `studio_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_songs`
+--
+
+DROP TABLE IF EXISTS `tbl_songs`;
+CREATE TABLE IF NOT EXISTS `tbl_songs` (
+  `songs_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `songs_cover` varchar(75) NOT NULL,
+  `songs_title` varchar(125) NOT NULL,
+  `songs_year` varchar(5) NOT NULL,
+  `songs_description` text NOT NULL,
+  `songs_artist` varchar(125) NOT NULL,
+  `songs_audio` varchar(75) NOT NULL,
+  PRIMARY KEY (`songs_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_songs`
+--
+
+INSERT INTO `tbl_songs` (`songs_id`, `songs_cover`, `songs_title`, `songs_year`, `songs_description`, `songs_artist`, `songs_audio`) VALUES
+(1, 'wonderwall.jpg', 'Wonderwall', '1995', '\"Wonderwall\" is a song by the English rock band Oasis. The song was produced by Noel Gallagher and Owen Morris for the band\'s second studio album (What\'s the Story) Morning Glory? (1995). According to Gallagher, \"Wonderwall\" describes \"an imaginary friend who\'s gonna come and save you from yourself\".[2]', 'Oasis ', 'wonderwall.mp3'),
+(2, 'alive.jpg', 'Alive', '1991', '\"Alive\" is the debut single by American rock band Pearl Jam. It was released on July 7, 1991, 51 days before the release of the band\'s debut album, Ten, on which \"Alive\" appears. Written by guitarist Stone Gossard, the song originated as an instrumental titled \"Dollar Short\" and was included on a demo tape circulated in hopes of finding a singer for the group.', 'Pearl Jam', 'alive.mp3'),
+(3, 'creep.jpg', 'Creep', '1993', 'Creep\" is the debut single by English alternative rock band Radiohead, released on 21 September 1992. It appeared on their debut studio album, Pablo Honey (1993).\r\n\r\nThom Yorke\'s lyrics express an obsessive, self-destructive sexual attraction. When the song moves to the chorus, Jonny Greenwood produces blasts of guitar noise. ', 'Radiohead', 'creep.mp3'),
+(4, 'teen_spirit.jpg', 'Smells Like Teen Spirit', '1991', '\"Smells Like Teen Spirit\" is a song by American rock band Nirvana. It is the opening track and lead single from the band\'s second album, Nevermind (1991), released on DGC Records. The unexpected success of the song propelled Nevermind to the top of several albums charts at the start of 1992, an event often marked as the point when grunge entered the mainstream.', 'Nirvana', 'teen_spirit.mp3'),
+(5, 'basket_case.jpg', 'Basket Case', '1994', '\"Basket Case\" is a song by the American rock band Green Day. It is the seventh track and second single from their third studio album, Dookie (1994). The song spent five weeks at the top of Billboard\'s Alternative Songs chart.', 'Green Day', 'basket_case.mp3'),
+(6, 'bitter_sweet.jpg', 'Bitter Sweet Symphony', '1997', '\"Bitter Sweet Symphony\" is a song by English rock band the Verve. It is the lead track on their third studio album, Urban Hymns (1997). It is based on a sample it uses from the Andrew Loog Oldham orchestral cover of The Rolling Stones\' song \"The Last Time\", and involved some legal controversy surrounding a plagiarism charge. As a result, Mick Jagger and Keith Richards were added to the songwriting credits, and all royalties from the song went to former Rolling Stones manager Allen Klein. ', 'The Verve', 'bitter_sweet.mp3'),
+(7, 'welcome_jungle.jpg', 'Welcome to the Jungle', '1987', '\"Welcome to the Jungle\" is a song by American rock band Guns N\' Roses, featured on their debut album, Appetite for Destruction (1987). It was released as the album\'s second single initially in the UK in September 1987 then again in October 1988 this time including the US, where it reached number seven on the Billboard Hot 100[8] and number 24 on the UK Singles Chart.[9]', 'Guns N\' Roses', 'welcome_jungle.mp3'),
+(8, 'video_killed.jpg', 'Video Killed the Radio Star', '1980', 'The Buggles, which formed in 1977, first consisted of Trevor Horn, Geoff Downes and Bruce Woolley.[2] They all wrote \"Video Killed the Radio Star\" in an hour of one afternoon in 1978, six months before it was recorded, together in Downes\' apartment located above a monumental stonemason\'s in Wimbledon Park, London.[3][4][5] The piece was built up from a chorus riff developed by Woolley.', 'The Buggles', 'video_killed.mp3'),
+(9, 'sweet_child.png', 'Sweet Child o\' Mine', '1988', '\"Sweet Child o\' Mine\" is a song by American rock band Guns N\' Roses. It appeared on their debut album Appetite for Destruction. The song was released in June 1988 as the album\'s third single, and topped the Billboard Hot 100 chart,[4] becoming the band\'s only number 1 US single. Re-released in 1989, it reached number 6 on the UK Singles Chart.', 'Guns N\' Roses', 'sweet_child.mp3'),
+(10, 'break_free.jpg', 'I Want to Break Free', '1984', '\"I Want to Break Free\" is a song by the British rock band Queen, written by their bass guitarist John Deacon. It appears on the album The Works (1984), and was released in three versions: album, single and extended. It came to be included in most live concerts by the group, in several videos and in The Freddie Mercury Tribute Concert where it was sung by Lisa Stansfield.', 'Queen', 'break_free.mp3'),
+(11, 'own_way.jpg', 'Go Your Own Way', '1979', '\"Go Your Own Way\" is a song by the British-American rock band Fleetwood Mac from their eleventh studio album Rumours (1977). The song was released as the album\'s first single in December 1976 on both sides of the Atlantic. Written and sung by Lindsey Buckingham, it became the band\'s first top-ten hit in the United States.[2] \"Go Your Own Way\" has been well received by music critics and was ranked number 120 by Rolling Stone magazine on their list of 500 greatest songs of all time.', 'Fleetwood Mac', 'own_way.mp3'),
+(12, 'across_universe.jpg', 'Across The Universe', '1969', 'Across the Universe\" is a song by the English rock band the Beatles. It was written by John Lennon and credited to Lennon–McCartney. The song first appeared on the 1969 various artists\' charity compilation album No One\'s Gonna Change Our World and later, in a different form, on their 1970 album Let It Be, the group\'s final released album. The song has been covered by many artists, including David Bowie on his 1975 album Young Americans, which featured contributions from Lennon.', 'The Beatles', 'across_universe.mp3'),
+(13, 'hey_you.jpg', 'Hey You', '1979', '\"Hey You\" is a song by English rock band Pink Floyd,[1] released on their 1979 double album The Wall.[2] The song, along with \"The Show Must Go On\", was edited out of the film for fear on the part of the filmmakers that the film was running too long; however, a rough version is available as an extra on the 25th Anniversary Edition DVD.', 'Pink Floyd', 'hey_you.mp3'),
+(14, 'god.jpg', 'God', '1970', '\"God\" is a song by English musician John Lennon, from his first post-Beatles solo album, John Lennon/Plastic Ono Band. The album was released on 11 December 1970 in the United States and the United Kingdom.', 'John Lennon', 'god.mp3'),
+(15, 'happy_together.jpg', 'Happy Together', '1967', '\"Happy Together\" is a song by American rock band the Turtles from their third studio album Happy Together (1967). The song was written by Garry Bonner and Alan Gordon, arranged by Chip Douglas, and produced by Joe Wissert.', 'The Turtles', 'happy_together.mp3');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_studio`
 --
 
@@ -1037,15 +1097,18 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
   `user_admin` tinyint(4) DEFAULT NULL,
   `user_access` tinyint(4) DEFAULT NULL,
+  `user_avatar` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_admin`, `user_access`) VALUES
-(1, 'trevor', 'user1', 'password', 't@t.com', '2019-02-01 19:07:35', '::1', 1, 5);
+INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_admin`, `user_access`, `user_avatar`) VALUES
+(1, 'trevor', 'user1', 'password', 't@t.com', '2019-02-01 19:07:35', '::1', 1, 5, 'count_olaf.jpg'),
+(2, 'jagdeep', 'user2', 'password', 'jagdeep@test.com', '2021-04-13 04:21:44', 'no', 1, 5, 'jagdeep.jpg'),
+(3, 'Kids', 'user3', 'password', 'kids@test.com', '2021-04-13 04:21:44', 'no', 1, 5, 'sam.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

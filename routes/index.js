@@ -12,12 +12,27 @@ router.use('/api', createProxyMiddleware({
     changeOrigin: true
 }))
 
+router.use('/ums', createProxyMiddleware({
+    target: 'http://localhost:5000',
+    headers: {
+        accept: 'application/json, application/x-www-form-urlencoded'
+    },
+    changeOrigin: true
+}))
+
 router.get('/', (req, res) => {
     res.render('index', { message: "Hello from handlebars!"});
 })
 
-router.get('/portfolio', (req, res) => {
-    res.render('artwork', {portmessage: "You're on the portfolio page"});
+// Other routes you might use
+router.use((req, res) => {
+    res.status(404);
+    res.render("error", { layout: "errorLayout.hbs", errormessage: `you've lost your way a wee bit! "${req.url}" doesn't exisit `});
+
 })
+
+// router.get('/portfolio', (req, res) => {
+//     res.render('artwork', {portmessage: "You're on the portfolio page"});
+// })
 
 module.exports = router;

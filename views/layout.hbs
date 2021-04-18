@@ -1,31 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roku Streaming Service</title>
-
-    <link rel="stylesheet" href="css/main.css" </head>
+{{> htmlhead}}
 
 <body>
-    <main id="app" class="mainBackgrd">
-        <div id="logo"><img src="images/logo/logo.svg" alt="Roku Logo"></div>
-        <div id="cat">
-            <ul>
-                <li><a href="#">Movies</a></li>
-                <li><a href="#">TV Shows</a></li>
-                <li><a href="#">Music</a></li>
-            </ul>
-        </div>
-        {{!-- <h1>Using Handlebars is Easy!</h1>
-        <h3>What follows is dynamic, server-side rendered content:</h3> --}}
-        <!-- This is where Handlebars will inject its templates -->
-        <!-- This is like a php inculde statement -->
+    <main id="app">
+        {{> header}}
 
         {{{ body }}}
+
+        {{> footer}}
     </main>
-    <script defer type="module" src="scripts/main.js"></script>
+    {{> scripts}}
 </body>
 
 </html>

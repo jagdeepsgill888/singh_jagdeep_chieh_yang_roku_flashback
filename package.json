@@ -10,8 +10,11 @@
   "author": "JS",
   "license": "MIT",
   "dependencies": {
+    "@splidejs/splide": "^2.4.21",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
-    "http-proxy-middleware": "^1.0.6"
+    "http-proxy-middleware": "^1.0.6",
+    "vue-carousel-3d": "^1.0.1",
+    "vueperslides": "^3.2.0"
   }
 }

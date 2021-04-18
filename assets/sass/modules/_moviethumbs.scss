@@ -1,22 +1,16 @@
 .movie-thumb {
-  width: 200px;
+  width: 150px;
   cursor: pointer;
   display: inline-block;
-  padding-left: 40px;
-  padding-right: 40px;
+
   img {
-    border-radius: 23px;
     max-height: 220px;
   }
 }
+.test {
+  width: 20px;
+}
 
-// .movie-thumb {
-//   width: 150px;
-//   cursor: pointer;
-//   display: inline-block;
-//   padding: 20px;
-//   img {
-//     border-radius: 23px;
-//     max-height: 220px;
-//   }
-// }
+.vueperslides__arrow svg {
+  color: $slider-btn-color;
+}
