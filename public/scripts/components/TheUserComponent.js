@@ -6,9 +6,9 @@ export default {
     template: `
    <section>
    <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
-        <div class="card rounded" @click="navToHome()">
-            <div class="card-body text-center">
-                <img :src="'images/' + liveuser.user_avatar" class="rounded-circle img-fluid">
+        <div @click="navToHome()">
+            <div class="userNameText">
+                <img :src="'images/' + liveuser.user_avatar" class="rounded-circle ">
                 <p>{{ liveuser.user_name }}</p>
             </div>
         </div>

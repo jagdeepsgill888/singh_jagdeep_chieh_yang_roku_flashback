@@ -11,6 +11,8 @@ export default {
 
 			<user v-for="(user, index) in userList" :liveuser="user" :key="index"></user>
 		</div>
+		<div class="addUser"><img src="images/add_user.jpg" class="watchlistadd" alt="add  user"></div>	
+		<div class="editUser"><img src="images/svgs/user_settings.svg" class="watchlistadd" alt="edit user"><p class="userNameText2">Edit User</p></div>	
 	</div>
 	`,
 
@@ -24,7 +26,7 @@ export default {
 
 	data() {
 	  return (
-          {	message: `Who's Using Roku?`, userList: [] }
+          {	message: `Welcome to Flashback`, userList: [] }
       )
 	},
 

@@ -36,6 +36,35 @@
   text-align: center;
 }
 
+.addUser {
+  text-align: center;
+}
+.userNameText p {
+  text-align: center;
+  margin-top: 20px;
+  color: #6c3c97;
+  font-size: 20px;
+}
+
+.userNameText2 {
+  margin-top: 20px;
+  color: #6c3c97;
+  font-size: 20px;
+}
+
+.editUser {
+  text-align: center;
+  img {
+    width: 136px;
+  }
+}
+
+@media screen and (min-width: 585px) {
+  .userNameText p {
+    margin-left: 70px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .form-row {
     padding-left: 50px;
