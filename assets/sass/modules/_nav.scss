@@ -56,11 +56,9 @@
   text-align: center;
   padding-top: 20px;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 0px 0px;
-  grid-template-areas:
-    "topNavManin"
-    "UserNavDesk";
+  grid-template-areas: "topNavManin";
 }
 
 .topNavManin {
@@ -72,14 +70,16 @@
 
 .topNavManin li {
   display: inline-block;
+  padding: 0 10px;
 }
 .topNavManin li a {
-  font-size: 1rem;
+  font-size: 18px;
   color: white;
   text-decoration: none;
 }
 .topNavManin li a:hover {
   color: #ae53ff;
+  text-decoration: underline;
 }
 .topNavManin li::after {
   padding: 0 8px 0 13px;
@@ -92,6 +92,13 @@
 @media (min-width: 992px) {
   .deskUI {
     display: block;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    ul li:hover {
+      color: #ae53ff;
+    }
   }
   .UserNavMobile {
     display: none;
@@ -125,6 +132,20 @@
     grid-area: UserNavDesk;
   }
 
+  .InnerTopVanGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "logoNav PageNav";
+  }
+  .logoNav {
+    grid-area: logoNav;
+  }
+  .PageNav {
+    grid-area: PageNav;
+    padding-top: 10px;
+  }
   //   .UserNavDesk {
   //     text-align: right;
   //   }
