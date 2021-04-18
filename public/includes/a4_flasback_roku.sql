@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 17, 2021 at 03:11 AM
+-- Generation Time: Apr 18, 2021 at 03:40 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -1106,9 +1106,9 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_admin`, `user_access`, `user_avatar`) VALUES
-(1, 'trevor', 'user1', 'password', 't@t.com', '2019-02-01 19:07:35', '::1', 1, 5, 'count_olaf.jpg'),
-(2, 'jagdeep', 'user2', 'password', 'jagdeep@test.com', '2021-04-13 04:21:44', 'no', 1, 5, 'jagdeep.jpg'),
-(3, 'Kids', 'user3', 'password', 'kids@test.com', '2021-04-13 04:21:44', 'no', 1, 5, 'sam.jpg');
+(1, 'trevor', 'user1', 'password', 't@t.com', '2019-02-01 19:07:35', '::1', 1, 5, 'user_1.jpg'),
+(2, 'jagdeep', 'user2', 'password', 'jagdeep@test.com', '2021-04-13 04:21:44', 'no', 1, 5, 'user_2.jpg'),
+(3, 'Kids', 'user3', 'password', 'kids@test.com', '2021-04-13 04:21:44', 'no', 1, 5, 'Kids.jpg');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
