@@ -88,6 +88,10 @@ nav:not(.side-nav) ul li {
 .fs-video {
   width: 100%;
 }
+.info-container {
+  background-color: #292a2b;
+  padding: 0 10px;
+}
 .media-container {
   background: #000;
 }
@@ -111,10 +115,18 @@ nav:not(.side-nav) ul li {
 .media-year,
 .media-time {
   font-size: 1em;
+  float: right;
+  padding: 0 10px;
 }
 .media-year {
   display: block;
   float: right;
+  color: #ae53ff;
+}
+.media-thumbs {
+  width: 43px;
+  float: right;
+  padding: 0 10px;
 }
 .side-nav {
   background: #020202;
@@ -248,7 +260,7 @@ footer ul li {
     font-size: 1.25em;
   }
   .media-year {
-    float: none;
+    float: right;
   }
   .media-container:first-of-type {
     padding-bottom: 0;

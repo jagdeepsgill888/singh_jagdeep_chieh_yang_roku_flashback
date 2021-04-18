@@ -27,16 +27,19 @@ export default {
             </div>
 
         <div class="row">
-            <div class="col-12 order-2 order-md-1 col-md-3 media-container">
-                <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
-                <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
-                <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
-                <span class="media-year">Released in {{currentMediaDetails.movies_year}}</span>
-                <span class="media-year "><img src="images/svgs/watchlist_add.svg" class="watchlistadd" alt="add watchlist button"></span>
+            <div class="media-container">
+                <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
             </div>
 
-            <div class="col-12 order-1 order-md-2 col-md-9 media-container">
-                <video autoplay controls muted :src="'video/' + currentMediaDetails.movies_trailer" class="fs-video"></video>
+            <div class="info-container">
+                <h4 class="media-title">{{currentMediaDetails.movies_title}}</h4>
+                <span class="media-genre"><strong>{{currentMediaDetails.movies_genre}}</strong></span>
+                <span class="media-year">{{currentMediaDetails.movies_year}}</span>
+                <span class="media-time">{{currentMediaDetails.movies_runtime}}</span>
+                <p class="media-details" v-html="currentMediaDetails.movies_storyline"></p>
+                <span class="media-playlist"><img src="images/svgs/watchlist_add.svg" class="watchlistadd" alt="add watchlist button"></span>
+                <span class="media-thumbs"><img src="images/svgs/thumb_up-24px.svg" class="watchlistadd" alt="add watchlist button"></span>
+                
             </div>
         </div>
 
